@@ -1,13 +1,15 @@
 '''
-Problem : J. Multiples
+Problem : https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/Z
 Author : Abdelrahman Mohamed
 User: Abdelrahman_JOXIC
 Date : 08/07/2024
 '''
+from math import log
+a,b,c,d = map(int,input().split())
 
-a,b = map(int, input().split())
 
-if a%b == 0 or b%a == 0:
-    print('Multiples')
+# A^B > C^D
+if b*log(a) > d*log(c):
+    print("YES")
 else:
-    print('No Multiples')
+    print("NO")
